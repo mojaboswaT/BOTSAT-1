@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BOTSAT-1: Revolutionizing Space Education</title>
+    <title>BOTSAT-1 Mission Timeline: Botswana's Journey Beyond Earth</title>
 
     <style>
         /* Root Theme Variables */
@@ -19,7 +18,6 @@
             --button-hover: #f0a500;
         }
 
-        /* Global Reset */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
@@ -28,7 +26,6 @@
             color: var(--text-color);
         }
 
-        /* Navbar Styling */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -54,10 +51,6 @@
             padding: 0;
         }
 
-        .nav-links ul li {
-            position: relative;
-        }
-
         .nav-links ul li a {
             text-decoration: none;
             color: var(--text-color);
@@ -74,84 +67,20 @@
         .dropdown-content {
             display: none;
             position: absolute;
-            top: 100%;
-            left: 0;
             background: var(--nav-bg);
-            min-width: 160px;
             border-radius: 5px;
-        }
-
-        .dropdown-content a {
-            padding: 10px 15px;
-            display: block;
-            color: var(--text-color);
-            text-decoration: none;
-        }
-
-        .dropdown-content a:hover {
-            background: var(--button-hover);
+            min-width: 160px;
         }
 
         .nav-links ul li:hover .dropdown-content {
             display: block;
         }
 
-        /* Side Panel (Mobile Navigation) */
-        .sidepanel {
-            height: 250px;
-            width: 0;
-            position: fixed;
-            z-index: 2;
-            top: 0;
-            right: 0;
-            background-color: var(--background-color);
-            overflow-x: hidden;
-            padding-top: 60px;
-            transition: 0.5s;
-        }
-
-        .sidepanel a {
-            padding: 8px 32px;
-            font-size: 22px;
-            color: var(--text-color);
-            text-decoration: none;
-            display: block;
-            transition: 0.3s;
-        }
-
-        .sidepanel a:hover {
-            color: var(--button-hover);
-        }
-
-        .sidepanel .closebtn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-        }
-
-        .openbtn {
-            position: relative;
-            right: 5%;
-            font-size: 35px;
-            background: var(--nav-bg);
-            color: var(--text-color);
-            border: none;
-            cursor: pointer;
-            padding: 8px 12px;
-            transition: background 0.3s ease;
-        }
-
-        .openbtn:hover {
-            background: var(--primary-color);
-        }
-
-        /* Hero Section */
         .hero {
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('pics/wallpaperflare.com_wallpaper (11).jpg') no-repeat center center;
+            background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('pics/wallpaperflare.com_wallpaper (33).jpg') no-repeat center center;
             background-size: cover;
             padding: 50px 20px;
             height: 100vh;
@@ -188,8 +117,9 @@
             background-color: var(--secondary-color);
         }
 
-        /* Social Media Icons */
-        .social-icons {
+
+         /* Social Media Icons */
+         .social-icons {
             position: absolute;
             right: 19px;
             top: 50%;
@@ -286,50 +216,6 @@
             stroke: var(--text-color);
         }
 
-        /* Main Content Section */
-        .content {
-            padding: 50px 20px;
-            background-color: #202020;
-        }
-
-        .content h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .content p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        /* Footer */
-        footer {
-            background: #000;
-            color: #999;
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9rem;
-            margin-top: 60px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links ul {
-                display: none;
-            }
-            .openbtn {
-                font-size: 30px;
-            }
-            .logo {
-                width: 80px;
-            }
-        }
-
-        /* Active State */
-        .active {
-            background-color: var(--primary-color);
-        }
 
         .timeline {
             display: flex;
@@ -356,11 +242,6 @@
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
         }
 
-        .timeline-card img {
-            width: 100%;
-            border-radius: 5px;
-        }
-
         .timeline-card h3 {
             font-size: 1.6rem;
             margin: 20px 0 10px;
@@ -382,25 +263,80 @@
             color: var(--primary-color);
         }
 
-        .scroll-button {
-            background: var(--primary-color);
-            color: white;
-            padding: 10px 15px;
-            font-size: 1rem;
-            cursor: pointer;
-            border-radius: 5px;
-            border: none;
-            transition: background 0.3s ease;
-            margin: 20px auto;
-            display: block;
+        footer {
+            background: #000;
+            color: #999;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            margin-top: 60px;
         }
 
-        .scroll-button:hover {
-            background: var(--secondary-color);
+        .active {
+            background-color: var(--primary-color);
+        }
+        /* Side Panel (Mobile Navigation) */
+        .sidepanel {
+            height: 250px;
+            width: 0;
+            position: fixed;
+            z-index: 2;
+            top: 0;
+            right: 0;
+            background-color: var(--background-color);
+            overflow-x: hidden;
+            padding-top: 60px;
+            transition: 0.5s;
+        }
+
+        .sidepanel a {
+            padding: 8px 32px;
+            font-size: 22px;
+            color: var(--text-color);
+            text-decoration: none;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidepanel a:hover {
+            color: var(--button-hover);
+        }
+
+        .sidepanel .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+        }
+
+        .openbtn {
+            position: relative;
+            right: 5%;
+            font-size: 35px;
+            background: var(--nav-bg);
+            color: var(--text-color);
+            border: none;
+            cursor: pointer;
+            padding: 8px 12px;
+            transition: background 0.3s ease;
+        }
+
+        .openbtn:hover {
+            background: var(--primary-color);
+        }
+        video {
+            width: 100%;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+
+        .date {
+            color: var(--secondary-color, #ffaa00);
+            display: block;
+            margin-top: 10px;
         }
     </style>
 </head>
-
 <body>
 
     <!-- Navigation Bar -->
@@ -412,7 +348,7 @@
                 <li>
                     <a href="#">Features</a>
                     <div class="dropdown-content">
-                        <a href="index.html">Home</a>
+                        
                         <a href="#">Agriculture</a>
                         <a href="#">Mining</a>
                         <a href="#">Wildlife</a>
@@ -420,7 +356,7 @@
                     </div>
                 </li>
                 <li><a href="#" class="active">Mission Timeline</a></li>
-                <li><a href="blog.html" >Blog</a></li>
+                <li><a href="blog.html">Blog</a></li>
             </ul>
         </div>
         <button class="openbtn" onclick="openNav()">&#9776;</button>
@@ -436,11 +372,10 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-text">
-            <h1>🚀 BOTSAT-1: Revolutionizing Space Education</h1>
-            <p>Botswana’s first satellite, BOTSAT-1, is now enhancing educational opportunities by providing schools with valuable space-based data, opening doors to new scientific explorations for students and educators alike.</p>
-            <button onclick="window.location.href='#'">Learn More</button>
+            <h1>🌍 BOTSAT-1: Tracing Botswana's Path to Space</h1>
+            <p>Explore the groundbreaking journey of BOTSAT-1, from bold ideas to orbit — a mission that redefined Botswana's future in science, technology, and education.</p>
+            <button onclick="window.location.href='#timeline'">View Timeline</button>
         </div>
-
         <div class="social-icons">
             <img src="https://img.icons8.com/dotty/80/FFFFFF/facebook-new.png" alt="Facebook">
             <img src="https://img.icons8.com/dotty/80/FFFFFF/instagram-new.png" alt="Instagram">
@@ -461,105 +396,129 @@
         </div>
     </section>
 
-
-
-
-
-
-
-    <!-- Main Content -->
-
-
-    <div class="timeline">
+    <!-- Timeline Section -->
+    <div id="timeline" class="timeline">
         <div class="timeline-card">
             <div class="event-icon">🛰️</div>
             <h3>2020: Conceptualization</h3>
             <p class="date">2020</p>
-            <p>In 2020, Botswana embarked on the ambitious journey of developing its very own satellite, BOTSAT-1. This idea came from the Botswana International University of Science and Technology (BIUST), marking the beginning of the nation's entry into the world of space exploration and technology. The primary goal was to enhance educational opportunities and open doors to space-based scientific research in Botswana.</p>
+            <p>In 2020, Botswana embarked on the ambitious journey of developing its own satellite, BOTSAT-1. Initiated by the Botswana International University of Science and Technology (BIUST), this project aimed to enhance scientific research and open new opportunities for education and innovation across the country.</p>
         </div>
 
         <div class="timeline-card">
             <div class="event-icon">🤝</div>
             <h3>2021: Partnership Established</h3>
             <p class="date">2021</p>
-            <p>In 2021, the Botswana government signed a landmark partnership with EnduroSat, a satellite technology company based in Bulgaria. This collaboration aimed to deliver a small but powerful satellite, designed to be used for educational purposes and data collection. The partnership enabled Botswana to gain expertise in satellite technology and space missions.</p>
+            <p>In 2021, Botswana secured a transformative partnership with EnduroSat, a leading satellite technology firm in Bulgaria. This collaboration combined local ambition with global expertise, accelerating Botswana's satellite development and knowledge transfer to local scientists and engineers.</p>
         </div>
 
         <div class="timeline-card">
             <div class="event-icon">⚙️</div>
             <h3>2022: Integration Begins</h3>
             <p class="date">2022</p>
-            <p>Work on integrating BOTSAT-1 into the satellite platform began in 2022. During this phase, engineers at EnduroSat worked closely with Botswana's team to assemble the satellite’s components. A key feature of BOTSAT-1 was its payload, which included a range of imaging sensors designed for Earth observation, particularly for agriculture, wildlife monitoring, and disaster response.</p>
+            <p>In 2022, the assembly and integration of BOTSAT-1 began, with Botswana’s engineers working alongside EnduroSat to embed advanced imaging sensors for Earth observation. This phase laid the groundwork for the satellite's role in environmental monitoring and data-driven research.</p>
         </div>
 
         <div class="timeline-card">
             <div class="event-icon">🛠️</div>
             <h3>2023: AIT Completed</h3>
             <p class="date">2023</p>
-            <p>After months of assembly, integration, and testing (AIT), BOTSAT-1 was successfully completed in 2023. All components passed their final checks, and the satellite was prepared for transport to the launch site. At this point, it was ready for launch aboard a SpaceX Falcon 9 rocket. This phase marked the culmination of the collaborative effort between Botswana, EnduroSat, and various international space experts.</p>
+            <p>By 2023, BOTSAT-1 successfully completed Assembly, Integration, and Testing (AIT). Passing rigorous safety and performance standards, the satellite was declared flight-ready and prepared for its journey to the launch site, signaling Botswana’s readiness for spaceflight.</p>
         </div>
 
         <div class="timeline-card">
             <div class="event-icon">🚀</div>
             <h3>March 2025: Launch</h3>
             <p class="date">March 15, 2025</p>
-            <p>BOTSAT-1 was launched on March 15, 2025, aboard a SpaceX Falcon 9 rocket from the Vandenberg Space Force Base in California. This event was celebrated as a historic milestone for Botswana, as it became the first African country to independently launch a satellite into orbit. The satellite entered a Sun-synchronous orbit, where it would remain for its operational lifetime.</p>
+            <p>On March 15, 2025, BOTSAT-1 lifted off aboard a SpaceX Falcon 9 rocket from Vandenberg Space Force Base in California. The successful deployment into a Sun-synchronous orbit marked a proud and historic achievement for Botswana and its future space endeavors.</p>
         </div>
 
         <div class="timeline-card">
             <div class="event-icon">📡</div>
             <h3>April 2025: First Contact</h3>
             <p class="date">April 2025</p>
-            <p>In April 2025, Botswana’s ground station successfully established the first communication link with BOTSAT-1. Initial health checks confirmed that the satellite was operating correctly, and data began to be transmitted back to Earth. This was a moment of pride for Botswana as it marked the beginning of the satellite's operational phase.</p>
+            <p>In April 2025, Botswana’s ground station confirmed successful communication with BOTSAT-1. The satellite’s systems were fully operational, and data transmission officially began, validating years of collaboration and engineering effort.</p>
         </div>
 
         <div class="timeline-card">
             <div class="event-icon">🌾</div>
             <h3>Mid 2025: Hyperspectral Imaging</h3>
             <p class="date">Mid 2025</p>
-            <p>By mid-2025, BOTSAT-1 began its Earth observation missions, primarily using its hyperspectral imaging technology. The satellite provided valuable data for various sectors, including agriculture, where it was used to monitor crop health, soil conditions, and water resources. This real-time satellite data was invaluable for the Botswana government and local farmers, assisting with resource management and decision-making.</p>
+            <p>By mid-2025, BOTSAT-1 was providing high-resolution hyperspectral images for sectors like agriculture and conservation. The satellite's insights helped farmers optimize crops, monitor ecosystems, and prepare Botswana for a data-driven sustainable future.</p>
         </div>
 
         <div class="timeline-card">
             <div class="event-icon">🏫</div>
             <h3>Late 2025: Education Integration</h3>
             <p class="date">Late 2025</p>
-            <p>By late 2025, the satellite’s data began being integrated into Botswana’s educational curriculum. Schools, universities, and research institutions used this data for scientific projects, space studies, and STEM initiatives. The satellite became a vital tool for inspiring the next generation of scientists, engineers, and researchers in Botswana and across Africa.</p>
-        </div>
-
-        <div class="timeline-card">
-            <div class="event-icon">📊</div>
-            <h3>2026 and Beyond: Operational Phase</h3>
-            <p class="date">2026+</p>
-            <p>The operational phase for BOTSAT-1 will extend well beyond 2026. In addition to its use in agriculture, the satellite is expected to play a major role in disaster management, wildlife tracking, and environmental monitoring. The data collected by the satellite will be used for a variety of applications, from managing water resources in remote regions to monitoring wildlife populations and supporting emergency response teams in times of crisis.</p>
-        </div>
-
-        <div class="timeline-card">
-            <div class="event-icon">🔬</div>
-            <h3>2030: BOTSAT-2 Preparations</h3>
-            <p class="date">2030</p>
-            <p>By 2030, preparations for the next phase of Botswana’s space program will begin, with a new satellite, BOTSAT-2, expected to expand on the mission of BOTSAT-1. The lessons learned from the first satellite’s mission will contribute to advancements in satellite technology and help Botswana further develop its space capabilities. The success of BOTSAT-1 will pave the way for greater involvement in global space exploration efforts.</p>
+            <p>In late 2025, BOTSAT-1’s mission reached classrooms across Botswana. Students and researchers gained hands-on access to real satellite data, fostering scientific curiosity and paving the way for the next generation of African space scientists and engineers.</p>
         </div>
     </div>
 
-    <button class="scroll-button" onclick="window.scrollTo(0, document.body.scrollHeight)">Scroll to End</button>
 
+    <section id="mission-timeline" class="mission-timeline" style="padding:40px 20px; background:#181818;">
+        <h2 style="text-align:center; color:var(--primary-color); margin-bottom:40px;">Mission Timeline Highlights</h2>
+        <div class="timeline">
+    
+            <div class="timeline-item" style="width:300px; background:#202020; border-radius:10px; padding:15px; color:white;">
+                <h3>Phase 1: Pre-launch Preparations</h3>
+                <video src="pics/235-135862236_small.mp4" autoplay muted loop playsinline poster="pics/your-poster.jpg" style="width:100%; border-radius:10px;">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Before its launch, BOTSAT-1 underwent rigorous assembly, integration, and testing at EnduroSat’s facilities in Sofia, Bulgaria. Botswana engineers from BIUST were actively involved, gaining valuable technical experience during this phase...</p>
+                <span class="date" style="color:var(--secondary-color); display:block; margin-top:10px;">2024</span>
+            </div>
+    
+            <div class="timeline-item" style="width:300px; background:#202020; border-radius:10px; padding:15px; color:white;">
+                <h3>Phase 2: Satellite Launch</h3>
+                <video src="pics/107991-678971274_small.mp4" autoplay muted loop playsinline poster="pics/your-poster.jpg" style="width:100%; border-radius:10px;">
+                    Your browser does not support the video tag.
+                </video>
+                <p>BOTSAT-1 was successfully launched into a sun-synchronous orbit aboard SpaceX’s Falcon 9 during the Transporter-13 mission. The launch marked Botswana’s official entry into the space industry...</p>
+                <span class="date" style="color:var(--secondary-color); display:block; margin-top:10px;">March 15, 2025</span>
+            </div>
+    
+            <div class="timeline-item" style="width:300px; background:#202020; border-radius:10px; padding:15px; color:white;">
+                <h3>Phase 3: Initial Operations and Data Collection</h3>
+                <video src="pics/26967-361107936_small.mp4" autoplay muted loop playsinline poster="pics/your-poster.jpg" style="width:100%; border-radius:10px;">
+                    Your browser does not support the video tag.
+                </video>
+                <p>After deployment, BOTSAT-1 began transmitting its first hyperspectral images back to Earth. The data supports agriculture, mining, environmental monitoring, and disaster management across Botswana...</p>
+                <span class="date" style="color:var(--secondary-color); display:block; margin-top:10px;">April 2025</span>
+            </div>
+    
+            <div class="timeline-item" style="width:300px; background:#202020; border-radius:10px; padding:15px; color:white;">
+                <h3>Phase 4: Continuous Data Transmission & Application</h3>
+                <video src="pics/784-139519770_small.mp4" autoplay muted loop playsinline poster="pics/your-poster.jpg" style="width:100%; border-radius:10px;">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Ongoing data from BOTSAT-1 is actively used to improve decision-making in agriculture, land use, disaster response, and urban planning — directly contributing to Botswana's sustainable development goals...</p>
+                <span class="date" style="color:var(--secondary-color); display:block; margin-top:10px;">Ongoing (Since April 2025)</span>
+            </div>
+    
+        </div>
+    </section>
+    
 
-    <!-- Footer with JavaScript -->
     <footer>
-        &copy; 2025 BOTSAT-1. All rights reserved.
-    </footer>
+        © 2025 BOTSAT-1 Mission | All Rights Reserved.
 
-    <script>
-        function openNav() {
+        <script>
+            function openNav() {
             document.getElementById("mySidepanel").style.width = "250px";
         }
 
         function closeNav() {
             document.getElementById("mySidepanel").style.width = "0";
         }
-    </script>
+
+        function toggleText(button) {
+    const card = button.parentElement;
+    card.classList.toggle('open');
+    button.textContent = card.classList.contains('open') ? 'Show Less' : 'Read More';
+}
+        </script>
+    </footer>
 
 </body>
 </html>
-

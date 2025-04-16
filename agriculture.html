@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOTSAT-1 Mission Timeline: Botswana's Journey Beyond Earth</title>
+
+    <style>
+        /* Root Theme Variables */
+        :root {
+            --primary-color: #A7C957;
+            --secondary-color: #f0a500;
+            --background-color: #31572C;
+            --text-color: #fff;
+            --hover-color: #333;
+            --nav-bg: rgba(0, 0, 0, 0.3);
+            --button-bg: #0d74e2;
+            --button-hover: #f0a500;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 30px;
+            background: var(--nav-bg);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.5s ease;
+        }
+
+        .logo {
+            width: 100px;
+        }
+
+        .nav-links ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            padding: 8px 15px;
+            display: block;
+            transition: background 0.3s ease;
+        }
+
+        .nav-links ul li a:hover {
+            background: var(--primary-color);
+            border-radius: 5px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: var(--nav-bg);
+            border-radius: 5px;
+            min-width: 160px;
+        }
+
+        .nav-links ul li:hover .dropdown-content {
+            display: block;
+        }
+
+        .sidepanel {
+    height: 250px;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    background-color: var(--background-color);
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+.sidepanel a {
+    padding: 8px 32px;
+    font-size: 22px;
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+}
+.sidepanel a:hover { color: var(--button-hover); }
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+.openbtn {
+    font-size: 35px;
+    background: var(--nav-bg);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    padding: 8px 62px;
+    transition: background 0.3s ease;
+}
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('pics/wallpaperflare.com_wallpaper\ \(35\).jpg') no-repeat center center;
+            background-size: cover;
+            padding: 50px 20px;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .hero button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero button:hover {
+            background-color: var(--secondary-color);
+        }
+
+
+         /* Social Media Icons */
+         .social-icons {
+            position: absolute;
+            right: 19px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(13, 116, 226, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 15px;
+            width: 2%;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .social-icons::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 15px;
+            padding: 3px;
+            background: linear-gradient(270deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.7));
+            background-size: 600% 600%;
+            animation: borderMove 8s ease infinite;
+            z-index: -1;
+        }
+
+        @keyframes borderMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .social-icons img {
+            display: block;
+            margin: 10px 0;
+            transition: transform 0.3s ease;
+            max-width: 50px;
+            height: auto;
+            width: 100%;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.5);
+        }
+
+        /* Animated Dots Decoration */
+        .animated-dots {
+            position: absolute;
+            left: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 10;
+        }
+
+        .animated-dots span {
+            width: 12px;
+            height: 12px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            animation: pulse 1.5s infinite ease-in-out;
+        }
+
+        .animated-dots span:nth-child(2) { animation-delay: 0.3s; }
+        .animated-dots span:nth-child(3) { animation-delay: 0.6s; }
+        .animated-dots span:nth-child(4) { animation-delay: 0.9s; }
+        .animated-dots span:nth-child(5) { animation-delay: 1.2s; }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.7; }
+            50% { transform: scale(1.5); opacity: 1; }
+        }
+
+        /* Scroll Down Arrow */
+        .scroll-down {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+
+        @keyframes bounce {
+            0%,20%,50%,80%,100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-15px); }
+            60% { transform: translateX(-50%) translateY(-7px); }
+        }
+
+        .scroll-down svg {
+            width: 40px;
+            height: 40px;
+            stroke: var(--text-color);
+        }
+
+        /* Sections General */
+.section-title {
+    text-align: center;
+    color: #000000;
+    font-size: 1.8rem;
+    margin: 2rem 0 1rem;
+}
+
+.section-description {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    color: #ffffff;
+}
+
+/* Season Forecast Timeline */
+.timeline-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 1rem;
+    background: #e9e5dc;
+    border-radius: 12px;
+}
+
+.timeline-title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.timeline-images {
+    display: flex;
+    gap: 10px;
+}
+
+.timeline-image {
+    height: 150px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.timeline-image:hover {
+    transform: scale(1.05);
+}
+
+.icon-reference {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+/* Recommendation Table */
+.recommendations-table-container {
+    margin: 2rem auto;
+    max-width: 600px;
+    
+}
+
+.recommendations-title {
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.recommendations-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    color: #4a7c59;
+}
+
+.recommendations-table th,
+.recommendations-table td {
+    border: 1px solid #ccc;
+    padding: 0.6rem;
+    text-align: center;
+}
+
+.recommendations-table th {
+    background-color: #4a7c59;
+    color: #000000;
+}
+
+/* Satellite Snapshots */
+.satellite-snapshots {
+    padding: 1rem;
+    text-align: center;
+}
+
+.snapshot-gallery {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.snapshot-thumbnail {
+    width: 150px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.snapshot-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+/* Download Button */
+.calendar-download-link {
+    display: block;
+    text-align: center;
+    background: #4a7c59;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 25px;
+    margin: 1.5rem auto;
+    width: fit-content;
+}
+
+/* Feedback Widget */
+.feedback-widget {
+    background: #e2f0d9;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.feedback-widget-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.feedback-textarea {
+    width: 90%;
+    height: 80px;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: vertical;
+}
+
+.feedback-submit-btn {
+    margin-top: 0.8rem;
+    background: #4a7c59;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.feedback-submit-btn:hover {
+    background: #365d44;
+}
+
+/* Impact Section */
+.impact-list {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+.impact-list li {
+    margin: 0.5rem 0;
+}
+
+.impact-media {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+}
+
+.impact-image {
+    width: 45%;
+    border-radius: 10px;
+}
+
+.impact-video-frame {
+    width: 100%;
+    max-width: 600px;
+    height: 340px;
+    display: block;
+    margin: 1rem auto;
+    border: none;
+    border-radius: 12px;
+}
+
+/* News & Updates */
+.news-feed {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.news-item {
+    background: #f7f5f1;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 5px solid #4a7c59;
+}
+
+.news-headline {
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem 0;
+}
+
+/* Farmers’ Stories */
+.story-list {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.story-card {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    width: 260px;
+    text-align: center;
+}
+
+.story-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 0.5rem;
+}
+
+/* Farmer Feedback Form */
+.feedback-form-section {
+    background: #e9e5dc;
+    padding: 2rem 1rem;
+    border-radius: 12px;
+}
+
+.feedback-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-label {
+    display: block;
+    margin: 0.5rem 0 0.2rem;
+}
+
+.form-input,
+.form-textarea,
+.form-select,
+.form-file {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.form-submit-button {
+    background: #4a7c59;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.form-submit-button:hover {
+    background: #365d44;
+}
+
+/* Footer */
+.site-footer {
+    background: #2d3a24;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .impact-image {
+        width: 100%;
+    }
+
+    .story-card {
+        width: 90%;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <img src="pics/BOTSAT-1-removebg-preview.png" class="logo" alt="BOTSAT-1 Logo">
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#">Features</a>
+                    <div class="dropdown-content">
+                        
+                        <a href="#">Agriculture</a>
+                        <a href="#">Mining</a>
+                        <a href="#">Wildlife</a>
+                        <a href="#">Education</a>
+                    </div>
+                </li>
+                <li><a href="#" class="active">Mission Timeline</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+        </div>
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
+        <div id="mySidepanel" class="sidepanel">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>🌍 Botsat-1: Transforming Agriculture from Space to Soil</h1>
+            <p>An introduction to how Botswana’s first satellite is empowering farmers with real-time insights and smart decision-making</p>
+            <button onclick="window.location.href='#timeline'">View more</button>
+        </div>
+        <div class="social-icons">
+            <img src="https://img.icons8.com/dotty/80/FFFFFF/facebook-new.png" alt="Facebook">
+            <img src="https://img.icons8.com/dotty/80/FFFFFF/instagram-new.png" alt="Instagram">
+            <img src="https://img.icons8.com/ios/50/FFFFFF/twitterx--v1.png" alt="TwitterX">
+        </div>
+
+        <div class="animated-dots">
+            <span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="scroll-down">
+            <a href="#next-section">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <polyline points="19 12 12 19 5 12"></polyline>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <section id="season-forecast" class="season-forecast-section">
+        <h2 class="section-title">Know Before You Grow: Botswana's 2025 Farming Season Forecast</h2>
+        <p class="section-description">A month-by-month breakdown of expected weather, rainfall, and soil conditions — helping farmers plan when to plough, plant, irrigate, and harvest.</p>
+        
+        <!-- Scrollable Timeline -->
+        <div class="timeline-container">
+            <h3 class="timeline-title">Seasonal Forecast Timeline</h3>
+            <div class="timeline-images">
+                <img src="forecast-january.jpg" alt="January Forecast" class="timeline-image">
+                <img src="forecast-february.jpg" alt="February Forecast" class="timeline-image">
+                <!-- Add remaining months -->
+                <img src="forecast-march.jpg" alt="March Forecast" class="timeline-image">
+                <img src="forecast-april.jpg" alt="April Forecast" class="timeline-image">
+                <img src="forecast-may.jpg" alt="May Forecast" class="timeline-image">
+                <img src="forecast-june.jpg" alt="June Forecast" class="timeline-image">
+                <img src="forecast-july.jpg" alt="July Forecast" class="timeline-image">
+                <img src="forecast-august.jpg" alt="August Forecast" class="timeline-image">
+                <img src="forecast-september.jpg" alt="September Forecast" class="timeline-image">
+                <img src="forecast-october.jpg" alt="October Forecast" class="timeline-image">
+                <img src="forecast-november.jpg" alt="November Forecast" class="timeline-image">
+                <img src="forecast-december.jpg" alt="December Forecast" class="timeline-image">
+            </div>
+            <p class="icon-reference">🌾 💧 ☀️ for easy reference.</p>
+        </div>
+
+        <!-- Recommendation Table -->
+        <div class="recommendations-table-container">
+            <h3 class="recommendations-title">Ploughing & Planting Recommendations</h3>
+            <table class="recommendations-table">
+                <tr>
+                    <th>Month</th>
+                    <th>Activity</th>
+                </tr>
+                <tr><td>January</td><td>Ploughing</td></tr>
+                <tr><td>February</td><td>Planting</td></tr>
+                <tr><td>March</td><td>Irrigation</td></tr>
+                <tr><td>April</td><td>Weeding</td></tr>
+                <tr><td>May</td><td>Harvesting</td></tr>
+                <tr><td>June</td><td>Maintenance</td></tr>
+                <!-- Extend as needed -->
+            </table>
+        </div>
+
+        <!-- Satellite Snapshots -->
+        <div class="satellite-snapshots">
+            <h3 class="snapshot-title">Satellite Snapshots</h3>
+            <div class="snapshot-gallery">
+                <img src="satellite-image1.jpg" alt="Satellite Image 1" class="snapshot-thumbnail">
+                <img src="satellite-image2.jpg" alt="Satellite Image 2" class="snapshot-thumbnail">
+                <img src="satellite-image3.jpg" alt="Satellite Image 3" class="snapshot-thumbnail">
+                <img src="satellite-image4.jpg" alt="Satellite Image 4" class="snapshot-thumbnail">
+            </div>
+        </div>
+
+        <!-- Calendar Download -->
+        <a href="seasonal-calendar.pdf" class="calendar-download-link">Download Seasonal Calendar (PDF)</a>
+
+        <!-- Feedback Widget -->
+        <div class="feedback-widget">
+            <h3 class="feedback-widget-title">Rate the Forecast</h3>
+            <textarea class="feedback-textarea" placeholder="Leave your feedback here..."></textarea>
+            <button class="feedback-submit-btn">Submit Feedback</button>
+        </div>
+    </section>
+
+    <section id="impact" class="impact-section">
+        <h2 class="section-title">Impact on Agriculture</h2>
+        <ul class="impact-list">
+            <li>Precision Farming</li>
+            <li>Early Drought Detection</li>
+            <li>Soil and Crop Health Monitoring</li>
+            <li>Post-disaster recovery planning</li>
+        </ul>
+        <div class="impact-media">
+            <img src="before-after1.jpg" alt="Before and After Satellite Image" class="impact-image">
+            <img src="before-after2.jpg" alt="Before and After Satellite Image" class="impact-image">
+        </div>
+        <div class="impact-video">
+            <iframe src="https://www.youtube.com/embed/example" title="How Botsat-1 Empowers Botswana’s Farmers" class="impact-video-frame"></iframe>
+        </div>
+    </section>
+
+    <section id="news-updates" class="news-section">
+        <h2 class="section-title">News & Updates</h2>
+        <div class="news-feed">
+            <div class="news-item">
+                <h3 class="news-headline">New Mission Update</h3>
+                <p class="news-summary">Botsat-1's latest mission has brought exciting results...</p>
+            </div>
+            <div class="news-item">
+                <h3 class="news-headline">Agricultural Report on Soil Health</h3>
+                <p class="news-summary">Botsat-1 has identified key trends in soil health in Botswana...</p>
+            </div>
+            <div class="news-item">
+                <h3 class="news-headline">Climate Change and Agricultural Impact</h3>
+                <p class="news-summary">A new study shows how climate change is affecting local farming...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="farmers-stories" class="stories-section">
+        <h2 class="section-title">Farmers’ Stories</h2>
+        <div class="story-list">
+            <div class="story-card">
+                <h3 class="story-title">Farmer John’s Success Story</h3>
+                <p class="story-text">How Botsat-1’s insights helped John improve his crop yields...</p>
+                <img src="farmer-john.jpg" alt="Farmer John" class="story-image">
+            </div>
+            <div class="story-card">
+                <h3 class="story-title">Farmer Mary’s Story</h3>
+                <p class="story-text">Mary shares how Botsat-1 helped her detect early signs of drought...</p>
+                <img src="farmer-mary.jpg" alt="Farmer Mary" class="story-image">
+            </div>
+        </div>
+    </section>
+
+    <section id="feedback-form" class="feedback-form-section">
+        <h2 class="section-title">Your Voice, Your Future: Share Your Farming Experience!</h2>
+        <form action="/submit-feedback" method="POST" class="feedback-form">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" name="name" class="form-input">
+
+            <label for="location" class="form-label">Location</label>
+            <input type="text" id="location" name="location" class="form-input">
+
+            <label for="crop" class="form-label">Type of Crop Grown</label>
+            <input type="text" id="crop" name="crop" class="form-input">
+
+            <label for="feedback" class="form-label">Feedback</label>
+            <textarea id="feedback" name="feedback" class="form-textarea"></textarea>
+
+            <label for="rating" class="form-label">Rate Data Accuracy</label>
+            <select id="rating" name="rating" class="form-select">
+                <option value="1">🌟</option>
+                <option value="2">🌟🌟</option>
+                <option value="3">🌟🌟🌟</option>
+                <option value="4">🌟🌟🌟🌟</option>
+                <option value="5">🌟🌟🌟🌟🌟</option>
+            </select>
+
+            <label for="farm-photo" class="form-label">Upload a photo of your farm (optional)</label>
+            <input type="file" id="farm-photo" name="farm-photo" class="form-file">
+
+            <button type="submit" class="form-submit-button">Submit Feedback</button>
+        </form>
+    </section>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 Botsat-1 | Empowering Agriculture with Space-Based Insights</p>
+        <script>
+            function openNav() {
+            document.getElementById("mySidepanel").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidepanel").style.width = "0";
+        }
+
+
+       
+        </script>
+    </footer>
+    
+
+   
+</body>
+</html>

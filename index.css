@@ -149,55 +149,51 @@ margin-bottom: 20px;
     transform: translateY(-2px);
 }
 
-
-
-
 .social-icons {
-position: absolute;
-right: 19px;
-top: 50%;
-transform: translateY(-50%);
-background: rgba(13, 116, 226, 0.2);
-backdrop-filter: blur(10px);
-padding: 20px;
-border-radius: 15px;
-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-width: 5%;
-height: auto;
-z-index: 1;
+    position: absolute;
+    right: 19px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(13, 116, 226, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 5%;
+    height: auto;
+    z-index: 1;
 }
 
 .social-icons::before {
-content: "";
-position: absolute;
-inset: 0;
-border-radius: 15px;
-padding: 3px;
-background: linear-gradient(270deg, rgba(255,255,255,0.7), rgba(255,255,255,0.1), rgba(255,255,255,0.7));
-background-size: 600% 600%;
-animation: borderMove 8s ease infinite;
-z-index: -1;
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 15px;
+    padding: 3px;
+    background: linear-gradient(270deg, rgba(255,255,255,0.7), rgba(255,255,255,0.1), rgba(255,255,255,0.7));
+    background-size: 600% 600%;
+    animation: borderMove 8s ease infinite;
+    z-index: -1;
 }
 
 @keyframes borderMove {
-0% { background-position: 0% 50%; }
-50% { background-position: 100% 50%; }
-100% { background-position: 0% 50%; }
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .social-icons img {
-display: block;
-margin: 10px 0;
-transition: transform 0.3s ease;
-width: 100%;
-max-width: 50px;
-height: auto;
+    display: block;
+    margin: 10px 0;
+    transition: transform 0.3s ease;
+    width: 100%;
+    max-width: 50px;
+    height: auto;
 }
 
 .social-icons img:hover {
-transform: scale(1.5);
+    transform: scale(1.5);
 }
-
 
 .animated-dots {
 position: absolute;
@@ -241,8 +237,6 @@ transform: scale(1.5);
 opacity: 1;
 }
 }
-
-
 
 .scroll-down {
     position: absolute;
@@ -470,4 +464,194 @@ background: #1e1e1e;
 }
 .active {
     background-color: #0d74e2;
+}
+
+/* Mining Page Styles */
+.content-section {
+    padding: 80px 20px;
+    background: var(--background-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    margin: 15px 0;
+    color: var(--text-color);
+}
+
+.feature-card p {
+    color: var(--text-color);
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+.benefits-section {
+    padding: 80px 20px;
+    background: var(--background-color);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.benefit-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.benefit-item h3 {
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.benefit-item p {
+    color: var(--text-color);
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+.case-studies {
+    padding: 80px 20px;
+    background: var(--background-color);
+}
+
+.case-study-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.case-study {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.case-study h3 {
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.case-study p {
+    color: var(--text-color);
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .feature-grid,
+    .benefits-grid,
+    .case-study-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .content-section,
+    .benefits-section,
+    .case-studies {
+        padding: 40px 20px;
+    }
+}
+
+/* Blog Page Styles */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.blog-post {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+}
+
+.post-content {
+    padding: 20px;
+}
+
+.post-date {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+.newsletter-section {
+    padding: 80px 20px;
+    background: var(--background-color);
+    text-align: center;
+}
+
+.newsletter-form {
+    max-width: 500px;
+    margin: 30px auto;
+    display: flex;
+    gap: 10px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+}
+
+.newsletter-form button {
+    padding: 12px 25px;
+    background: var(--primary-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background: var(--button-hover);
+}
+
+@media (max-width: 768px) {
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .newsletter-form button {
+        width: 100%;
+    }
 }

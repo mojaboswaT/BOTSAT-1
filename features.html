@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOTSAT-1 - Features</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css" rel="stylesheet">
+</head>
+<body>
+    <section class="hero">
+        <nav class="navbar">
+            <img src="pics/BOTSAT-1-removebg-preview.png" class="logo" alt="BOTSAT-1 Logo">
+
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="features.html" class="active">Features</a>
+                        <div class="dropdown-content">
+                            <a href="agriculture.html">Agriculture</a>
+                            <a href="mining.html">Mining</a>
+                            <a href="wildlife.html">Wildlife</a>
+                            <a href="education.html">Education</a>
+                        </div>
+                    </li>
+                    <li><a href="Mission_Timeline.html">Mission Timeline</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+
+            <button class="openbtn" onclick="openNav()">&#9776;</button>
+
+            <div id="mySidepanel" class="sidepanel">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+            </div>
+        </nav>
+
+        <div class="herotext">
+            <h1>BOTSAT-1 Features</h1>
+            <p>Discover How Our Satellite is Transforming Botswana</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <h2>Key Applications</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <img src="pics/wallpaperflare.com_wallpaper (15).jpg" alt="Agriculture" style="width:100%; border-radius:10px;">
+                    <h3>Agriculture</h3>
+                    <p>Revolutionizing farming practices with real-time monitoring of soil moisture, crop health, and weather conditions.</p>
+                    <a href="agriculture.html" class="btn-primary">Learn More</a>
+                </div>
+                <div class="feature-card">
+                    <img src="pics/wallpaperflare.com_wallpaper (16).jpg" alt="Mining" style="width:100%; border-radius:10px;">
+                    <h3>Mining</h3>
+                    <p>Enhancing mineral exploration and sustainable mining practices through advanced satellite imagery.</p>
+                    <a href="mining.html" class="btn-primary">Learn More</a>
+                </div>
+                <div class="feature-card">
+                    <img src="pics/wallpaperflare.com_wallpaper (17).jpg" alt="Wildlife" style="width:100%; border-radius:10px;">
+                    <h3>Wildlife Conservation</h3>
+                    <p>Protecting Botswana's rich biodiversity through satellite-based monitoring and tracking.</p>
+                    <a href="wildlife.html" class="btn-primary">Learn More</a>
+                </div>
+                <div class="feature-card">
+                    <img src="pics/wallpaperflare.com_wallpaper (18).jpg" alt="Education" style="width:100%; border-radius:10px;">
+                    <h3>Education & Research</h3>
+                    <p>Inspiring the next generation of space scientists and supporting research initiatives.</p>
+                    <a href="education.html" class="btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits-section">
+        <div class="container">
+            <h2>Satellite Capabilities</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <h3>High-Resolution Imaging</h3>
+                    <p>Advanced sensors providing detailed imagery for various applications.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Real-Time Data</h3>
+                    <p>Continuous monitoring and data transmission capabilities.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Multi-Spectral Analysis</h3>
+                    <p>Comprehensive data collection across different spectral bands.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Global Coverage</h3>
+                    <p>Extensive coverage area for comprehensive monitoring.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-studies">
+        <div class="container">
+            <h2>Impact Stories</h2>
+            <div class="case-study-grid">
+                <div class="case-study">
+                    <h3>Agricultural Innovation</h3>
+                    <p>How BOTSAT-1's data is helping farmers increase crop yields and optimize resource usage.</p>
+                </div>
+                <div class="case-study">
+                    <h3>Mining Efficiency</h3>
+                    <p>Success stories of improved mining operations through satellite data analysis.</p>
+                </div>
+                <div class="case-study">
+                    <h3>Wildlife Protection</h3>
+                    <p>Examples of successful conservation efforts supported by satellite monitoring.</p>
+                </div>
+                <div class="case-study">
+                    <h3>Educational Impact</h3>
+                    <p>Stories of students and researchers benefiting from satellite data access.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background:#000; color:#999; text-align:center; padding:20px 10px; font-size:0.9rem;">
+        <p>&copy; 2025 BOTSAT-1 Mission — Botswana's First Satellite. All rights reserved.</p>
+        <p>
+            <a href="#" style="color:#999; text-decoration:none; margin:0 10px;">Privacy Policy</a> |
+            <a href="#" style="color:#999; text-decoration:none; margin:0 10px;">Terms of Use</a> |
+            <a href="#" style="color:#999; text-decoration:none; margin:0 10px;">Contact</a>
+        </p>
+    </footer>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidepanel").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidepanel").style.width = "0";
+        }
+
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html> 

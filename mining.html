@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOTSAT-1 - Mining Applications</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css" rel="stylesheet">
+</head>
+<body>
+    <section class="hero">
+        <nav class="navbar">
+            <img src="pics/BOTSAT-1-removebg-preview.png" class="logo" alt="BOTSAT-1 Logo">
+
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="features.html">Features</a>
+                        <div class="dropdown-content">
+                            <a href="agriculture.html">Agriculture</a>
+                            <a href="mining.html" class="active">Mining</a>
+                            <a href="#">Wildlife</a>
+                            <a href="#">Education</a>
+                        </div>
+                    </li>
+                    <li><a href="Mission_Timeline.html">Mission Timeline</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+
+            <button class="openbtn" onclick="openNav()">&#9776;</button>
+
+            <div id="mySidepanel" class="sidepanel">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+            </div>
+        </nav>
+
+        <div class="herotext">
+            <h1>Mining Applications</h1>
+            <p>Revolutionizing Botswana's Mining Industry with Satellite Technology</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <h2>Satellite Technology in Mining</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <img src="pics/wallpaperflare.com_wallpaper (16).jpg" alt="Mineral Mapping" style="width:100%; border-radius:10px;">
+                    <h3>Mineral Mapping</h3>
+                    <p>BOTSAT-1's advanced sensors provide detailed mineral mapping capabilities, helping identify potential mining sites and optimize resource exploration.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="pics/wallpaperflare.com_wallpaper (21).jpg" alt="Environmental Monitoring" style="width:100%; border-radius:10px;">
+                    <h3>Environmental Monitoring</h3>
+                    <p>Continuous monitoring of mining operations to ensure compliance with environmental regulations and sustainable practices.</p>
+                </div>
+                <div class="feature-card">
+                    <img src="pics/wallpaperflare.com_wallpaper (20).jpg" alt="Infrastructure Planning" style="width:100%; border-radius:10px;">
+                    <h3>Infrastructure Planning</h3>
+                    <p>Satellite data assists in planning mining infrastructure, access roads, and support facilities while minimizing environmental impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits-section">
+        <div class="container">
+            <h2>Key Benefits</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <h3>Resource Optimization</h3>
+                    <p>Precise mapping of mineral deposits leads to more efficient extraction and reduced operational costs.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Sustainable Mining</h3>
+                    <p>Real-time monitoring helps maintain environmental standards and promotes responsible mining practices.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Safety Enhancement</h3>
+                    <p>Early detection of potential hazards and monitoring of mining operations improves safety standards.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Economic Growth</h3>
+                    <p>Enhanced mining capabilities contribute to Botswana's economic development and global competitiveness.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="case-studies">
+        <div class="container">
+            <h2>Success Stories</h2>
+            <div class="case-study-grid">
+                <div class="case-study">
+                    <h3>Diamond Mining Optimization</h3>
+                    <p>How BOTSAT-1's data helped optimize diamond mining operations in the Orapa region, leading to a 15% increase in efficiency.</p>
+                </div>
+                <div class="case-study">
+                    <h3>Copper Exploration</h3>
+                    <p>Satellite-assisted discovery of new copper deposits in the Kalahari region, opening new opportunities for economic development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background:#000; color:#999; text-align:center; padding:20px 10px; font-size:0.9rem;">
+        <p>&copy; 2025 BOTSAT-1 Mission — Botswana's First Satellite. All rights reserved.</p>
+        <p>
+            <a href="#" style="color:#999; text-decoration:none; margin:0 10px;">Privacy Policy</a> |
+            <a href="#" style="color:#999; text-decoration:none; margin:0 10px;">Terms of Use</a> |
+            <a href="#" style="color:#999; text-decoration:none; margin:0 10px;">Contact</a>
+        </p>
+    </footer>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidepanel").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidepanel").style.width = "0";
+        }
+
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html> 

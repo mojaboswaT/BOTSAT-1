@@ -655,3 +655,113 @@ background: #1e1e1e;
         width: 100%;
     }
 }
+
+/* Common Image Styles */
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Video Styles */
+video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Footer Styles */
+footer {
+    background: #000;
+    color: #999;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #999;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Feedback Section Styles */
+#feedback {
+    background-color: #111;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#feedback form {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+#feedback label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+#feedback input,
+#feedback textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#feedback button {
+    padding: 10px 20px;
+    background: var(--button-bg);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* Mission Timeline Styles */
+#mission-timeline {
+    padding: 40px 20px;
+    background: #181818;
+}
+
+#mission-timeline h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+.timeline-item {
+    width: 300px;
+    background: #202020;
+    border-radius: 10px;
+    padding: 15px;
+    color: white;
+}
+
+.timeline-item .date {
+    color: var(--secondary-color);
+    display: block;
+    margin-top: 10px;
+}
+
+/* Next Section Styles */
+#next-section {
+    height: 100vh;
+    background: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Blog Post Image Styles */
+.blog-post img {
+    margin-bottom: 10px;
+}
+
+/* News Card Image Styles */
+.news-card img {
+    margin-bottom: 10px;
+}

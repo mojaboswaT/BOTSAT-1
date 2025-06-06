@@ -1,0 +1,456 @@
+/* Mission Timeline Styles */
+.mission-timeline {
+    padding: 40px 20px;
+    background: #181818;
+    width: 100%;
+}
+
+.mission-timeline h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.timeline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.timeline-item {
+    width: 400px;
+    background: #202020;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px);
+}
+
+.timeline-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.timeline-item video {
+    width: 100%;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.timeline-item p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+.timeline-item .date {
+    color: var(--secondary-color);
+    display: block;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .timeline-item {
+        width: 100%;
+        max-width: 500px;
+    }
+    
+    .mission-timeline h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Featured Blog Section Styles */
+.featured-blog {
+    padding: 30px 15px;
+    background: #181818;
+}
+
+.featured-blog h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.blog-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.blog-post {
+    flex: 1;
+    max-width: 280px;
+    background: #202020;
+    border-radius: 8px;
+    padding: 10px;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-3px);
+}
+
+.blog-post img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.blog-post h3 {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+    color: var(--primary-color);
+}
+
+.blog-post p {
+    font-size: 0.8rem;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+.blog-post a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8rem;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.blog-post a:hover {
+    color: var(--primary-color);
+}
+
+@media (max-width: 1200px) {
+    .blog-grid {
+        flex-wrap: wrap;
+    }
+    
+    .blog-post {
+        max-width: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-post {
+        max-width: 100%;
+    }
+    
+    .blog-post img {
+        height: 150px;
+    }
+    
+    .featured-blog h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Mission Timeline Styles (Original) */
+.mission-timeline {
+    padding: 40px 20px;
+    background: #181818;
+}
+
+.mission-timeline h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+.timeline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.timeline-item {
+    width: 300px;
+    background: #202020;
+    border-radius: 10px;
+    padding: 15px;
+    color: white;
+}
+
+.timeline-item video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.timeline-item .date {
+    color: var(--secondary-color);
+    display: block;
+    margin-top: 10px;
+}
+
+/* Mission Timeline Styles (Index Page) */
+.mission-timeline-index {
+    padding: 40px 20px;
+    background: #181818;
+}
+
+.mission-timeline-index h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.timeline-index {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.timeline-item-index {
+    flex: 1;
+    max-width: 400px;
+    background: #202020;
+    border-radius: 12px;
+    padding: 20px;
+    color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.timeline-item-index:hover {
+    transform: translateY(-5px);
+}
+
+.timeline-item-index h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.timeline-item-index video {
+    width: 100%;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.timeline-item-index p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+.timeline-item-index .date {
+    color: var(--secondary-color);
+    display: block;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+@media (max-width: 1200px) {
+    .timeline-index {
+        flex-wrap: wrap;
+    }
+    
+    .timeline-item-index {
+        max-width: calc(50% - 25px);
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline-item-index {
+        max-width: 100%;
+    }
+    
+    .mission-timeline-index h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Navigation Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: var(--nav-bg);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background 0.5s ease;
+}
+
+.logo {
+    width: 100px;
+}
+
+.nav-links {
+    display: block;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 8px 15px;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+.nav-links ul li a:hover {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: var(--nav-bg);
+    border-radius: 5px;
+    min-width: 160px;
+}
+
+.nav-links ul li:hover .dropdown-content {
+    display: block;
+}
+
+/* Side Panel Styles */
+.sidepanel {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 0;
+    background-color: var(--background-color);
+    overflow: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.sidepanel .nav-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.sidepanel a {
+    padding: 8px 32px;
+    font-size: 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.sidepanel a:hover {
+    color: var(--button-hover);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    padding: 10px;
+}
+
+.sidepanel .sub-link {
+    padding-left: 48px !important;
+    font-size: 0.95rem !important;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+.sidepanel .sub-link:hover {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.openbtn {
+    display: none;
+    font-size: 35px;
+    background: var(--nav-bg);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    transition: background 0.3s ease;
+}
+
+.openbtn:hover {
+    background: var(--primary-color);
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .openbtn {
+        display: block;
+    }
+
+    .sidepanel {
+        width: 0;
+    }
+
+    .sidepanel.active {
+        width: 280px;
+    }
+
+    .sidepanel .nav-items {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    /* Hide Contact Us link on mobile as it will be part of the nav items */
+    .sidepanel .contact-link {
+        display: none;
+    }
+
+    /* Show all navigation items in side panel on mobile */
+    .sidepanel .nav-items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sidepanel .nav-items a {
+        padding: 10px 32px;
+        font-size: 1.1rem;
+    }
+} 

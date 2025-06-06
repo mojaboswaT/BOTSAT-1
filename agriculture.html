@@ -268,46 +268,10 @@
     color: #ffffff;
 }
 
-/* Season Forecast Timeline */
-.timeline-container {
-    overflow-x: auto;
-    white-space: nowrap;
-    padding: 1rem;
-    background: #e9e5dc;
-    border-radius: 12px;
-}
-
-.timeline-title {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-}
-
-.timeline-images {
-    display: flex;
-    gap: 10px;
-}
-
-.timeline-image {
-    height: 150px;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-}
-
-.timeline-image:hover {
-    transform: scale(1.05);
-}
-
-.icon-reference {
-    margin-top: 1rem;
-    text-align: center;
-    font-size: 1.3rem;
-}
-
 /* Recommendation Table */
 .recommendations-table-container {
     margin: 2rem auto;
     max-width: 600px;
-    
 }
 
 .recommendations-title {
@@ -408,37 +372,31 @@
 }
 
 /* Impact Section */
-.impact-list {
-    list-style: none;
-    text-align: center;
-    padding: 0;
+.impact-stories {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-.impact-list li {
-    margin: 0.5rem 0;
-}
-
-.impact-media {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin: 1rem auto;
-}
-
-.impact-image {
-    width: 45%;
+.impact-story {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
     border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.impact-video-frame {
-    width: 100%;
-    max-width: 600px;
-    height: 340px;
-    display: block;
-    margin: 1rem auto;
-    border: none;
-    border-radius: 12px;
+.impact-story h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.impact-story p {
+    line-height: 1.6;
+    color: var(--text-color);
+    margin: 0;
 }
 
 /* News & Updates */
@@ -448,39 +406,39 @@
 }
 
 .news-item {
-    background: #f7f5f1;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    border-radius: 8px;
-    border-left: 5px solid #4a7c59;
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 5px solid var(--primary-color);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
 }
 
 .news-headline {
-    font-size: 1.2rem;
-    margin: 0 0 0.5rem 0;
+    font-size: 1.3rem;
+    margin: 0 0 0.8rem 0;
+    color: var(--primary-color);
 }
 
-/* Farmers’ Stories */
-.story-list {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+.news-summary {
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
 }
 
-.story-card {
-    background: #fff;
-    padding: 1rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    width: 260px;
-    text-align: center;
-}
-
+/* Remove Farmers' Stories styles */
+.story-list,
+.story-card,
+.story-title,
+.story-text,
 .story-image {
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 0.5rem;
+    display: none;
 }
 
 /* Farmer Feedback Form */
@@ -559,13 +517,13 @@
                     <a href="#">Features</a>
                     <div class="dropdown-content">
                         
-                        <a href="#">Agriculture</a>
-                        <a href="#">Mining</a>
-                        <a href="#">Wildlife</a>
-                        <a href="#">Education</a>
+                        <a href="agriculture.html" class="active">Agriculture</a>
+                        <a href="mining.html">Mining</a>
+                        <a href="wildlife.html">Wildlife</a>
+                        <a href="education.html">Education</a>
                     </div>
                 </li>
-                <li><a href="#" class="active">Mission Timeline</a></li>
+                <li><a href="Mission_Timeline.html" >Mission Timeline</a></li>
                 <li><a href="blog.html">Blog</a></li>
             </ul>
         </div>
@@ -583,7 +541,7 @@
     <section class="hero">
         <div class="hero-text">
             <h1>🌍 Botsat-1: Transforming Agriculture from Space to Soil</h1>
-            <p>An introduction to how Botswana’s first satellite is empowering farmers with real-time insights and smart decision-making</p>
+            <p>An introduction to how Botswana's first satellite is empowering farmers with real-time insights and smart decision-making</p>
             <button onclick="window.location.href='#timeline'">View more</button>
         </div>
         <div class="social-icons">
@@ -610,27 +568,6 @@
         <h2 class="section-title">Know Before You Grow: Botswana's 2025 Farming Season Forecast</h2>
         <p class="section-description">A month-by-month breakdown of expected weather, rainfall, and soil conditions — helping farmers plan when to plough, plant, irrigate, and harvest.</p>
         
-        <!-- Scrollable Timeline -->
-        <div class="timeline-container">
-            <h3 class="timeline-title">Seasonal Forecast Timeline</h3>
-            <div class="timeline-images">
-                <img src="pics/icons8-rain.gif" alt="January Forecast" class="timeline-image">
-                <img src="pics/icons8-rain-cloud.gif" alt="February Forecast" class="timeline-image">
-                <!-- Add remaining months -->
-                <img src="pics/icons8-rain.gif" alt="March Forecast" class="timeline-image">
-                <img src="pics/icons8-snowflake (1).gif" alt="April Forecast" class="timeline-image">
-                <img src="pics/icons8-snowflake (1).gif" alt="May Forecast" class="timeline-image">
-                <img src="pics/icons8-snowflake (1).gif" alt="June Forecast" class="timeline-image">
-                <img src="pics/icons8-snowflake (1).gif" alt="July Forecast" class="timeline-image">
-                <img src="pics/icons8-snowflake (1).gif" alt="August Forecast" class="timeline-image">
-                <img src="pics/icons8-sun (1).gif" alt="September Forecast" class="timeline-image">
-                <img src="pics/icons8-sun (1).gif" alt="October Forecast" class="timeline-image">
-                <img src="pics/icons8-rain.gif" alt="November Forecast" class="timeline-image">
-                <img src="pics/icons8-rain.gif" alt="December Forecast" class="timeline-image">
-            </div>
-            <p class="icon-reference">🌾 💧 ☀️ for easy reference.</p>
-        </div>
-
         <!-- Recommendation Table -->
         <div class="recommendations-table-container">
             <h3 class="recommendations-title">Ploughing & Planting Recommendations</h3>
@@ -645,46 +582,35 @@
                 <tr><td>April</td><td>Weeding</td></tr>
                 <tr><td>May</td><td>Harvesting</td></tr>
                 <tr><td>June</td><td>Maintenance</td></tr>
-                <!-- Extend as needed -->
             </table>
-        </div>
-
-        <!-- Satellite Snapshots -->
-        <div class="satellite-snapshots">
-            <h3 class="snapshot-title">Satellite Snapshots</h3>
-            <div class="snapshot-gallery">
-                <img src="satellite-image1.jpg" alt="Satellite Image 1" class="snapshot-thumbnail">
-                <img src="satellite-image2.jpg" alt="Satellite Image 2" class="snapshot-thumbnail">
-                <img src="satellite-image3.jpg" alt="Satellite Image 3" class="snapshot-thumbnail">
-                <img src="satellite-image4.jpg" alt="Satellite Image 4" class="snapshot-thumbnail">
-            </div>
         </div>
 
         <!-- Calendar Download -->
         <a href="seasonal-calendar.pdf" class="calendar-download-link">Download Seasonal Calendar (PDF)</a>
-
-        <!-- Feedback Widget -->
-        <div class="feedback-widget">
-            <h3 class="feedback-widget-title">Rate the Forecast</h3>
-            <textarea class="feedback-textarea" placeholder="Leave your feedback here..."></textarea>
-            <button class="feedback-submit-btn">Submit Feedback</button>
-        </div>
     </section>
 
     <section id="impact" class="impact-section">
         <h2 class="section-title">Impact on Agriculture</h2>
-        <ul class="impact-list">
-            <li>Precision Farming</li>
-            <li>Early Drought Detection</li>
-            <li>Soil and Crop Health Monitoring</li>
-            <li>Post-disaster recovery planning</li>
-        </ul>
-        <div class="impact-media">
-            <img src="before-after1.jpg" alt="Before and After Satellite Image" class="impact-image">
-            <img src="before-after2.jpg" alt="Before and After Satellite Image" class="impact-image">
-        </div>
-        <div class="impact-video">
-            <iframe src="https://www.youtube.com/embed/example" title="How Botsat-1 Empowers Botswana’s Farmers" class="impact-video-frame"></iframe>
+        <div class="impact-stories">
+            <div class="impact-story">
+                <h3>Precision Farming Revolution</h3>
+                <p>BOTSAT-1's high-resolution imagery has transformed traditional farming practices in Botswana. Farmers now receive detailed soil moisture maps and crop health indicators, enabling them to optimize water usage and fertilizer application. This precision approach has led to a 30% increase in crop yields while reducing resource wastage.</p>
+            </div>
+            
+            <div class="impact-story">
+                <h3>Early Drought Detection System</h3>
+                <p>Our satellite's advanced sensors can detect early signs of drought conditions up to three months before they become visible to the naked eye. This early warning system has helped farmers prepare and implement drought mitigation strategies, saving countless crops and livelihoods across the region.</p>
+            </div>
+            
+            <div class="impact-story">
+                <h3>Soil Health Monitoring</h3>
+                <p>Through continuous monitoring of soil conditions, BOTSAT-1 provides valuable insights into soil composition and health. This data helps farmers make informed decisions about crop rotation, soil treatment, and sustainable farming practices, leading to improved soil quality and long-term agricultural sustainability.</p>
+            </div>
+            
+            <div class="impact-story">
+                <h3>Post-Disaster Recovery Planning</h3>
+                <p>In the aftermath of natural disasters, BOTSAT-1's rapid assessment capabilities have proven invaluable. The satellite provides detailed damage assessment maps, helping authorities and farmers quickly identify affected areas and plan recovery efforts. This has significantly reduced recovery time and improved resource allocation during critical periods.</p>
+            </div>
         </div>
     </section>
 
@@ -693,31 +619,15 @@
         <div class="news-feed">
             <div class="news-item">
                 <h3 class="news-headline">New Mission Update</h3>
-                <p class="news-summary">Botsat-1's latest mission has brought exciting results...</p>
+                <p class="news-summary">Botsat-1's latest mission has brought exciting results in agricultural monitoring, with improved resolution and data accuracy. Farmers across Botswana are now receiving more detailed insights for their farming decisions.</p>
             </div>
             <div class="news-item">
                 <h3 class="news-headline">Agricultural Report on Soil Health</h3>
-                <p class="news-summary">Botsat-1 has identified key trends in soil health in Botswana...</p>
+                <p class="news-summary">Botsat-1 has identified key trends in soil health in Botswana, revealing patterns that will help farmers optimize their crop selection and improve soil management practices for better yields.</p>
             </div>
             <div class="news-item">
                 <h3 class="news-headline">Climate Change and Agricultural Impact</h3>
-                <p class="news-summary">A new study shows how climate change is affecting local farming...</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="farmers-stories" class="stories-section">
-        <h2 class="section-title">Farmers’ Stories</h2>
-        <div class="story-list">
-            <div class="story-card">
-                <h3 class="story-title">Farmer John’s Success Story</h3>
-                <p class="story-text">How Botsat-1’s insights helped John improve his crop yields...</p>
-                <img src="farmer-john.jpg" alt="Farmer John" class="story-image">
-            </div>
-            <div class="story-card">
-                <h3 class="story-title">Farmer Mary’s Story</h3>
-                <p class="story-text">Mary shares how Botsat-1 helped her detect early signs of drought...</p>
-                <img src="farmer-mary.jpg" alt="Farmer Mary" class="story-image">
+                <p class="news-summary">A new study using Botsat-1 data shows how climate change is affecting local farming patterns, providing crucial information for developing adaptive agricultural strategies in the region.</p>
             </div>
         </div>
     </section>

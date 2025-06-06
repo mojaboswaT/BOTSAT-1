@@ -1,451 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BOTSAT-1 - Blog</title>
+    <title>BOTSAT-1: Revolutionizing Space Education</title>
     <link href="index.css" rel="stylesheet">
-
     <style>
-        /* Root Theme Variables */
-        :root {
-            --primary-color: #0d74e2;
-            --secondary-color: #f0a500;
-            --background-color: #101010;
-            --text-color: #fff;
-            --hover-color: #333;
-            --nav-bg: rgba(0, 0, 0, 0.0);
-            --button-bg: #0d74e2;
-            --button-hover: #f0a500;
-        }
-
-        /* Global Reset */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--background-color);
-            color: var(--text-color);
-        }
-
-        /* Navbar Styling */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 30px;
-            background: var(--nav-bg);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            transition: background 0.5s ease;
-        }
-
-        .logo {
-            width: 100px;
-        }
-
-        .nav-links ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-links ul li {
-            position: relative;
-        }
-
-        .nav-links ul li a {
-            text-decoration: none;
-            color: var(--text-color);
-            padding: 8px 15px;
-            display: block;
-            transition: background 0.3s ease;
-        }
-
-        .nav-links ul li a:hover {
-            background: var(--primary-color);
-            border-radius: 5px;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: var(--nav-bg);
-            min-width: 160px;
-            border-radius: 5px;
-        }
-
-        .dropdown-content a {
-            padding: 10px 15px;
-            display: block;
-            color: var(--text-color);
-            text-decoration: none;
-        }
-
-        .dropdown-content a:hover {
-            background: var(--button-hover);
-        }
-
-        .nav-links ul li:hover .dropdown-content {
-            display: block;
-        }
-
-        /* Side Panel (Mobile Navigation) */
-        .sidepanel {
-            height: 250px;
-            width: 0;
-            position: fixed;
-            z-index: 2;
-            top: 0;
-            right: 0;
-            background-color: var(--background-color);
-            overflow-x: hidden;
-            padding-top: 60px;
-            transition: 0.5s;
-        }
-
-        .sidepanel a {
-            padding: 8px 32px;
-            font-size: 22px;
-            color: var(--text-color);
-            text-decoration: none;
-            display: block;
-            transition: 0.3s;
-        }
-
-        .sidepanel a:hover {
-            color: var(--button-hover);
-        }
-
-        .sidepanel .closebtn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-        }
-
-        .openbtn {
-            position: relative;
-            right: 5%;
-            font-size: 35px;
-            background: var(--nav-bg);
-            color: var(--text-color);
-            border: none;
-            cursor: pointer;
-            padding: 8px 12px;
-            transition: background 0.3s ease;
-        }
-
-        .openbtn:hover {
-            background: var(--primary-color);
-        }
-
-        /* Hero Section */
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('pics/wallpaperflare.com_wallpaper (11).jpg') no-repeat center center;
-            background-size: cover;
-            padding: 50px 20px;
-            height: 100vh;
-            text-align: center;
-        }
-
-        .hero-text {
-            max-width: 600px;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            color: var(--primary-color);
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
-
-        .hero button {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-size: 1rem;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .hero button:hover {
-            background-color: var(--secondary-color);
-        }
-
-        /* Social Media Icons */
-        .social-icons {
-            position: absolute;
-            right: 19px;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(13, 116, 226, 0.2);
-            backdrop-filter: blur(10px);
-            padding: 20px;
-            border-radius: 15px;
-            width: 2%;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-
-        .social-icons::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            border-radius: 15px;
-            padding: 3px;
-            background: linear-gradient(270deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.7));
-            background-size: 600% 600%;
-            animation: borderMove 8s ease infinite;
-            z-index: -1;
-        }
-
-        @keyframes borderMove {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .social-icons img {
-            display: block;
-            margin: 10px 0;
-            transition: transform 0.3s ease;
-            max-width: 50px;
-            height: auto;
-            width: 100%;
-        }
-
-        .social-icons img:hover {
-            transform: scale(1.5);
-        }
-
-        /* Animated Dots Decoration */
-        .animated-dots {
-            position: absolute;
-            left: 30px;
-            top: 50%;
-            transform: translateY(-50%);
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            z-index: 10;
-        }
-
-        .animated-dots span {
-            width: 12px;
-            height: 12px;
-            background: var(--primary-color);
-            border-radius: 50%;
-            animation: pulse 1.5s infinite ease-in-out;
-        }
-
-        .animated-dots span:nth-child(2) { animation-delay: 0.3s; }
-        .animated-dots span:nth-child(3) { animation-delay: 0.6s; }
-        .animated-dots span:nth-child(4) { animation-delay: 0.9s; }
-        .animated-dots span:nth-child(5) { animation-delay: 1.2s; }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.7; }
-            50% { transform: scale(1.5); opacity: 1; }
-        }
-
-        /* Scroll Down Arrow */
-        .scroll-down {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: bounce 2s infinite;
-            cursor: pointer;
-        }
-
-        @keyframes bounce {
-            0%,20%,50%,80%,100% { transform: translateX(-50%) translateY(0); }
-            40% { transform: translateX(-50%) translateY(-15px); }
-            60% { transform: translateX(-50%) translateY(-7px); }
-        }
-
-        .scroll-down svg {
-            width: 40px;
-            height: 40px;
-            stroke: var(--text-color);
-        }
-
-        /* Main Content Section */
         .content {
-            padding: 50px 20px;
-            background-color: #202020;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #1a1a1a;
         }
 
         .content h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .content p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        /* Footer */
-        footer {
-            background: #000;
-            color: #999;
             text-align: center;
-            padding: 20px;
-            font-size: 0.9rem;
-            margin-top: 60px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links ul {
-                display: none;
-            }
-            .openbtn {
-                font-size: 30px;
-            }
-            .logo {
-                width: 80px;
-            }
-        }
-
-        /* Active State */
-        .active {
-            background-color: var(--primary-color);
+            color: #0d74e2;
+            font-size: 2rem;
+            margin-bottom: 2rem;
         }
 
         .card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
-}
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            padding: 1rem 0;
+        }
 
-.card {
-    background: #1a1a1a;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        .card {
+            background: #2a2a2a;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-.card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
 
-.card h3 {
-    margin: 15px 15px 5px;
-    color: var(--primary-color);
-}
+        .card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
 
-.card p {
-    margin: 0 15px 10px;
-}
+        .card-content {
+            padding: 1rem;
+        }
 
-.card .more-text {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease;
-}
+        .card h3 {
+            color: #0d74e2;
+            margin: 0 0 0.5rem;
+            font-size: 1.2rem;
+        }
 
-.card.open .more-text {
-    max-height: 200px;
-}
+        .card p {
+            margin: 0 0 0.5rem;
+            line-height: 1.4;
+            color: #e0e0e0;
+            font-size: 0.9rem;
+        }
 
-.card button {
-    margin: 0 15px 15px;
-    padding: 10px 15px;
-    background: var(--button-bg);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+        .card .short {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
 
-.card button:hover {
-    background: var(--button-hover);
-}
+        .card .more-text {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
-}
+        .card.open .more-text {
+            max-height: 200px;
+            padding: 0.8rem;
+            margin: 0.8rem 0;
+        }
 
+        .card button {
+            background: #0d74e2;
+            color: white;
+            border: none;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .card button:hover {
+            background: #f0a500;
+        }
+
+        @media (max-width: 768px) {
+            .content h2 {
+                font-size: 1.8rem;
+            }
+
+            .card-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1rem;
+            }
+        }
     </style>
 </head>
-
 <body>
-
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <img src="pics/BOTSAT-1-removebg-preview.png" class="logo" alt="BOTSAT-1 Logo">
-        <div class="nav-links">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li>
-                    <a href="features.html">Features</a>
-                    <div class="dropdown-content">
-                        <a href="agriculture.html">Agriculture</a>
-                        <a href="mining.html">Mining</a>
-                        <a href="wildlife.html">Wildlife</a>
-                        <a href="education.html">Education</a>
-                    </div>
-                </li>
-                <li><a href="Mission_Timeline.html">Mission Timeline</a></li>
-                <li><a href="blog.html" class="active">Blog</a></li>
-            </ul>
-        </div>
-        <button class="openbtn" onclick="openNav()">&#9776;</button>
-        <div id="mySidepanel" class="sidepanel">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Clients</a>
-            <a href="#">Contact</a>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-text">
-            <h1>BOTSAT-1 Blog</h1>
-            <p>Latest Updates and Stories from Botswana's Space Mission</p>
+        <nav class="navbar">
+            <img src="pics/BOTSAT-1-removebg-preview.png" class="logo" alt="BOTSAT-1 Logo">
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="features.html">Features</a>
+                        <div class="dropdown-content">
+                            <a href="agriculture.html">Agriculture</a>
+                            <a href="mining.html">Mining</a>
+                            <a href="wildlife.html">Wildlife</a>
+                            <a href="education.html">Education</a>
+                        </div>
+                    </li>
+                    <li><a href="Mission_Timeline.html">Mission Timeline</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                </ul>
+            </div>
+            <button class="openbtn" onclick="openNav()">&#9776;</button>
+
+            <div id="mySidepanel" class="sidepanel">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="nav-items">
+                    <a href="#" class="contact-link">Contact Us</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="herotext">
+            <h1>🚀 BOTSAT-1: Revolutionizing Space Education</h1>
+            <p>Botswana's first satellite, BOTSAT-1, is now enhancing educational opportunities by providing schools with valuable space-based data, opening doors to new scientific explorations for students and educators alike.</p>
+            <a href="#content" class="btn-primary">Explore Space Stories</a>
         </div>
 
-        <div class="social-icons">
-            <img src="https://img.icons8.com/dotty/80/FFFFFF/facebook-new.png" alt="Facebook">
-            <img src="https://img.icons8.com/dotty/80/FFFFFF/instagram-new.png" alt="Instagram">
-            <img src="https://img.icons8.com/ios/50/FFFFFF/twitterx--v1.png" alt="TwitterX">
+        <div class="hero-section">
+            <div class="social-icons">
+                <img width="80" height="80" src="pics/social-media.png" alt="facebook-new"/>
+                <img width="80" height="80" src="pics/instagram.png" alt="instagram-new"/>
+                <img width="50" height="50" src="pics/social-media-2.png" alt="twitterx--v1"/>
+            </div>
         </div>
 
         <div class="animated-dots">
-            <span></span><span></span><span></span><span></span><span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-
+        
         <div class="scroll-down">
-            <a href="#next-section">
+            <a href="#content">
                 <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="12" y1="5" x2="12" y2="19"></line>
                     <polyline points="19 12 12 19 5 12"></polyline>
@@ -454,78 +172,156 @@
         </div>
     </section>
 
-    <!-- Main Content -->
-   
-    <section class="content" id="next-section">
-        <h2>Latest Articles</h2>
-    
+    <main class="content" id="content">
+        <h2>🚀 Latest Space Stories & Facts</h2>
         <div class="card-grid">
-    
             <div class="card">
-                <img src="pics/wallpaperflare.com_wallpaper (19).jpg" alt="Satellite Launch">
-                <h3>BOTSAT-1 Successfully Launched into Orbit</h3>
-                <p class="short">Botswana's first satellite, BOTSAT-1, has been successfully launched into space, marking a historic moment for the country's space program...</p>
-                <div class="more-text">
-                    <p>BOTSAT-1 delivers earth observation data to help students, scientists, and government track agriculture, wildlife and weather — fueling the country's space ambitions.</p>
+                <img src="pics/wallpaperflare.com_wallpaper (32).jpg" alt="BOTSAT-1 Satellite">
+                <div class="card-content">
+                    <h3>BOTSAT-1: Botswana's Space Milestone</h3>
+                    <p class="short">Botswana's first satellite is helping schools explore the universe!</p>
+                    <div class="more-text">
+                        <p>BOTSAT-1 delivers earth observation data to help students, scientists, and government track agriculture, wildlife and weather — fueling the country's space ambitions.</p>
+                    </div>
+                    <button onclick="toggleText(this)">Read More</button>
                 </div>
-                <button onclick="toggleText(this)">Read More</button>
             </div>
-    
-            <div class="card">
-                <img src="pics/wallpaperflare.com_wallpaper (20).jpg" alt="Data Analysis">
-                <h3>First Images from BOTSAT-1 Released</h3>
-                <p class="short">The first set of high-resolution images from BOTSAT-1 has been released, showcasing the satellite's advanced imaging capabilities...</p>
-                <div class="more-text">
-                    <p>The first set of high-resolution images from BOTSAT-1 has been released, showcasing the satellite's advanced imaging capabilities...</p>
-                </div>
-                <button onclick="toggleText(this)">Read More</button>
-            </div>
-    
-            <div class="card">
-                <img src="pics/wallpaperflare.com_wallpaper (21).jpg" alt="Research">
-                <h3>BOTSAT-1 Data Aids Agricultural Research</h3>
-                <p class="short">Researchers are using BOTSAT-1's data to develop new agricultural monitoring systems, helping farmers optimize crop yields...</p>
-                <div class="more-text">
-                    <p>Researchers are using BOTSAT-1's data to develop new agricultural monitoring systems, helping farmers optimize crop yields...</p>
-                </div>
-                <button onclick="toggleText(this)">Read More</button>
-            </div>
-    
-            <div class="card">
-                <img src="pics/wallpaperflare.com_wallpaper (15).jpg" alt="Education">
-                <h3>Space Education Program Launched</h3>
-                <p class="short">A new educational program has been launched to inspire young students in Botswana to pursue careers in space science and technology...</p>
-                <div class="more-text">
-                    <p>A new educational program has been launched to inspire young students in Botswana to pursue careers in space science and technology...</p>
-                </div>
-                <button onclick="toggleText(this)">Read More</button>
-            </div>
-    
-        </div>
-    </section>
-    
 
-    <!-- Footer with JavaScript -->
+            <div class="card">
+                <img src="pics/wallpaperflare.com_wallpaper (22).jpg" alt="NASA Artemis Mission">
+                <div class="card-content">
+                    <h3>NASA's Artemis: Returning to the Moon</h3>
+                    <p class="short">NASA is aiming to return humans to the Moon by 2026!</p>
+                    <div class="more-text">
+                        <p>The Artemis program will land the first woman and person of color on the lunar surface, preparing the foundation for long-term exploration and eventual missions to Mars.</p>
+                    </div>
+                    <button onclick="toggleText(this)">Read More</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="pics/wallpaperflare.com_wallpaper (23).jpg" alt="James Webb Telescope">
+                <div class="card-content">
+                    <h3>James Webb Telescope: Deep Space Detective</h3>
+                    <p class="short">The Webb Telescope reveals ancient galaxies 13.5 billion light-years away!</p>
+                    <div class="more-text">
+                        <p>It offers scientists unprecedented infrared images of the early universe, helping unlock mysteries about galaxy formation and cosmic origins.</p>
+                    </div>
+                    <button onclick="toggleText(this)">Read More</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="pics/wallpaperflare.com_wallpaper (24).jpg" alt="SpaceX Starship">
+                <div class="card-content">
+                    <h3>SpaceX Starship: Built for Mars</h3>
+                    <p class="short">Starship is the world's most powerful rocket, designed for Mars colonization.</p>
+                    <div class="more-text">
+                        <p>SpaceX's Starship is aiming for full reusability and interplanetary travel, with plans for Moon landings and Mars cargo missions in the coming years.</p>
+                    </div>
+                    <button onclick="toggleText(this)">Read More</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="pics/wallpaperflare.com_wallpaper (25).jpg" alt="Perseverance Rover">
+                <div class="card-content">
+                    <h3>Mars Perseverance Rover: Searching for Life</h3>
+                    <p class="short">Perseverance is drilling and caching samples on Mars for future return missions!</p>
+                    <div class="more-text">
+                        <p>The rover is exploring Jezero Crater and collecting rock cores, which may hold clues to past life on the red planet.</p>
+                    </div>
+                    <button onclick="toggleText(this)">Read More</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="pics/wallpaperflare.com_wallpaper (18).jpg" alt="Black Hole Discovery">
+                <div class="card-content">
+                    <h3>Black Hole Imaging: A Cosmic First</h3>
+                    <p class="short">In 2019, scientists captured the first-ever image of a black hole!</p>
+                    <div class="more-text">
+                        <p>Located in the M87 galaxy, this black hole is 6.5 billion times the mass of the sun — proving Einstein's theory of relativity once again.</p>
+                    </div>
+                    <button onclick="toggleText(this)">Read More</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
     <footer>
         &copy; 2025 BOTSAT-1. All rights reserved.
     </footer>
 
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
     <script>
+        function toggleText(button) {
+            const card = button.parentElement.parentElement;
+            card.classList.toggle('open');
+            button.textContent = card.classList.contains('open') ? 'Show Less' : 'Read More';
+        }
+
         function openNav() {
-            document.getElementById("mySidepanel").style.width = "250px";
+            document.getElementById("mySidepanel").style.width = "280px";
+            document.getElementById("mySidepanel").classList.add("active");
+            
+            // Move navigation items to side panel on mobile
+            if (window.innerWidth <= 768) {
+                const navItems = document.querySelector('.nav-links ul').cloneNode(true);
+                const sidePanelNav = document.querySelector('.sidepanel .nav-items');
+                sidePanelNav.innerHTML = '';
+                
+                // Convert list items to links
+                navItems.querySelectorAll('li').forEach(li => {
+                    const link = li.querySelector('a');
+                    const newLink = document.createElement('a');
+                    newLink.href = link.href;
+                    newLink.textContent = link.textContent;
+                    if (link.classList.contains('active')) {
+                        newLink.classList.add('active');
+                    }
+                    sidePanelNav.appendChild(newLink);
+                    
+                    // Handle dropdown items
+                    const dropdown = li.querySelector('.dropdown-content');
+                    if (dropdown) {
+                        dropdown.querySelectorAll('a').forEach(dropdownLink => {
+                            const subLink = document.createElement('a');
+                            subLink.href = dropdownLink.href;
+                            subLink.textContent = dropdownLink.textContent;
+                            subLink.classList.add('sub-link');
+                            sidePanelNav.appendChild(subLink);
+                        });
+                    }
+                });
+            }
         }
 
         function closeNav() {
             document.getElementById("mySidepanel").style.width = "0";
+            document.getElementById("mySidepanel").classList.remove("active");
+            
+            // Restore Contact Us link on desktop
+            if (window.innerWidth > 768) {
+                const sidePanelNav = document.querySelector('.sidepanel .nav-items');
+                sidePanelNav.innerHTML = '<a href="#" class="contact-link">Contact Us</a>';
+            }
         }
 
-        function toggleText(button) {
-    const card = button.parentElement;
-    card.classList.toggle('open');
-    button.textContent = card.classList.contains('open') ? 'Show Less' : 'Read More';
-}
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                closeNav();
+            }
+        });
 
+        // Preloader
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
     </script>
-
 </body>
-</html>
+</html> 

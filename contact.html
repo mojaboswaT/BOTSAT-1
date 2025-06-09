@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us - BOTSAT-1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: url('pics/wallpaperflare.com_wallpaper (35).jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            font-family: Arial, sans-serif;
+            opacity: 1 !important;
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            height: auto;
+            background: none;
+        }
+
+        .navbar {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .contact-section {
+            position: relative;
+            padding: 180px 20px 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            min-height: calc(100vh - 80px);
+            display: flex;
+            flex-direction: column;
+            z-index: 1;
+        }
+
+        .contact-section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+            flex: 1;
+        }
+
+        .contact-info {
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form {
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            color: #fff;
+            font-size: 1.1em;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            padding: 12px 30px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .submit-btn:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .contact-info h3 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+
+        .contact-info p {
+            color: #fff;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            font-size: 1.1em;
+        }
+
+        .contact-info i {
+            margin-right: 10px;
+            color: #007bff;
+        }
+
+        .contact-info .social-icons {
+            position: static;
+            transform: none;
+            background: none;
+            backdrop-filter: none;
+            padding: 0;
+            border-radius: 0;
+            box-shadow: none;
+            width: auto;
+            height: auto;
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .contact-info .social-icons::before {
+            display: none;
+        }
+
+        .contact-info .social-icons img {
+            display: inline-block;
+            margin: 0;
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-info .social-icons img:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-section {
+                padding: 40px 20px;
+            }
+
+            .contact-info h3,
+            .contact-form h3 {
+                font-size: 1.3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <nav class="navbar">
+            <img src="pics/BOTSAT-1-removebg-preview.png" class="logo" alt="BOTSAT-1 Logo">
+
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="features.html">Features</a>
+                        <div class="dropdown-content">
+                            <a href="agriculture.html">Agriculture</a>
+                            <a href="mining.html">Mining</a>
+                            <a href="wildlife.html">Wildlife</a>
+                            <a href="education.html">Education</a>
+                        </div>
+                    </li>
+                    <li><a href="Mission_Timeline.html">Mission Timeline</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html" class="active">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <button class="openbtn" onclick="openNav()">&#9776;</button>
+
+            <div id="mySidepanel" class="sidepanel">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="nav-items">
+                    <a href="contact.html" class="contact-link">Contact Us</a>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <section class="contact-section">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p>We'd love to hear from you! Whether you have questions about BOTSAT-1, want to collaborate, or just want to learn more about our mission, we're here to help.</p>
+                
+                <h3>Contact Information</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Botswana International University of Science and Technology (BIUST)</p>
+                <p><i class="fas fa-phone"></i> +267 123 456 789</p>
+                <p><i class="fas fa-envelope"></i> info@botsat1.bw</p>
+                
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <img width="40" height="40" src="pics/social-media.png" alt="facebook"/>
+                    <img width="40" height="40" src="pics/instagram.png" alt="instagram"/>
+                    <img width="40" height="40" src="pics/social-media-2.png" alt="twitter"/>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Send us a Message</h3>
+                <form id="contactForm" onsubmit="return handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            // Here you would typically handle the form submission
+            // For now, we'll just show an alert
+            alert('Thank you for your message! We will get back to you soon.');
+            document.getElementById('contactForm').reset();
+            return false;
+        }
+
+        function openNav() {
+            document.getElementById("mySidepanel").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidepanel").style.width = "0";
+        }
+    </script>
+</body>
+</html> 
